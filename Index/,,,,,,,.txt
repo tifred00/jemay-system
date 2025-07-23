@@ -1,6 +1,0 @@
-CREATE TABLE administracion (
-    
-    id int AUTO_INCREMENT PRIMARY KEY,
-    identificacion int,
-    contraseña text
-    );
