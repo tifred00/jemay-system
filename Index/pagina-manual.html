@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Manual de Convivencia - JEMAY Systems</title>
+  <link rel="icon" href="graduacion.png" type="image/png">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    
+    .header {
+      background-color: #ffffff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .header img {
+      width: 250px;
+    }
+
+    .header a {
+      margin-left: 15px;
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+    }
+
+    .header a:hover {
+      text-decoration: underline;
+    }
+
+    hr {
+      margin: 0;
+      border: none;
+      border-top: 1px solid #ddd;
+    }
+
+    
+    .main-menu {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px 0;
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .main-menu button,
+    .main-menu select {
+      font-size: 18px;
+      padding: 10px 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background-color: #f8f8f8;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .main-menu button:hover,
+    .main-menu select:hover {
+      background-color: #e9ecef;
+    }
+
+    .main-menu input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    
+    .content {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 30px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .content h1 {
+      text-align: center;
+      font-size: 32px;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    .content h2 {
+      color: #007bff;
+      margin-top: 25px;
+    }
+
+    .content p, .content ul {
+      font-size: 18px;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    .content ul {
+      padding-left: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .header, .main-menu {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  
+  <div class="header">
+    <a href="index.html">
+      <img src="LOGO.jpeg" alt="Logo">
+    </a>
+    <div>
+      <a href="mision.html">Misión</a>
+      <a href="vision.html">Visión</a>
+      <a href="nosotros.html">Acerca de Nosotros</a>
+      <a href="InicioSesion.html">Inicio de Sesión</a>
+    </div>
+  </div>
+
+  <hr>
+
+  
+  <div class="main-menu">
+    <a href="pagina-manual.html">
+      <button>Manual de Convivencia</button>
+    </a>
+    <a href="pagina-institucion.html">
+      <button>Institución</button>
+    </a>
+    <select onchange="location.href=this.value;">
+      <option disabled selected>Departamentos</option>
+      <option value="Ciencias.html">Ciencias</option>
+      <option value="Lenguas.html">Lenguas</option>
+      <option value="Matematicas.html">Matemáticas</option>
+    </select>
+    <select onchange="location.href=this.value;">
+      <option disabled selected>Noticias</option>
+      <option value="Inscripciones.html">Inscripciones</option>
+      <option value="Graduacion.html">Graduación</option>
+    </select>
+    <form onsubmit="buscar(); return false;">
+      <input type="text" placeholder="Buscar" id="busqueda">
+    </form>
+  </div>
+
+  
+  <div class="content">
+    <h1>Manual de Convivencia</h1>
+
+    <h2>1. Presentación</h2>
+    <p>El Manual de Convivencia del Colegio JEMAY establece las normas, derechos y deberes que orientan la vida escolar de toda la comunidad educativa.</p>
+
+    <h2>2. Derechos de los Estudiantes</h2>
+    <ul>
+      <li>Recibir una educación integral de calidad.</li>
+      <li>Ser tratados con respeto y dignidad.</li>
+      <li>Participar en las actividades académicas y culturales.</li>
+    </ul>
+
+    <h2>3. Deberes de los Estudiantes</h2>
+    <ul>
+      <li>Asistir puntualmente a clases.</li>
+      <li>Respetar a los docentes y compañeros.</li>
+      <li>Cuidar los recursos y espacios del colegio.</li>
+    </ul>
+
+    <h2>4. Normas de Convivencia</h2>
+    <p>Se espera un comportamiento respetuoso, ordenado y solidario dentro y fuera del aula. Se prohíbe el uso de lenguaje ofensivo y la violencia.</p>
+
+    <h2>5. Manejo de Conflictos</h2>
+    <p>Los conflictos serán atendidos por el Comité de Convivencia, con participación de orientadores, docentes y padres de familia cuando sea necesario.</p>
+
+    <h2>6. Sanciones</h2>
+    <p>Las faltas se clasifican como leves, graves o muy graves, y tienen consecuencias proporcionales según el reglamento interno.</p>
+
+    <h2>7. Compromiso</h2>
+    <p>Todos los miembros de la comunidad educativa deben conocer y respetar este manual para garantizar una sana convivencia escolar.</p>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>INICIO DE SESIÓN ADMINISTRADOR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+      background-color: #f8f9fa;
+    }
+
+    .contenedor {
+      display: flex;
+      height: 100%;
+      width: 100%;
+    }
+
+    .izquierda {
+      width: 35%;
+      background-color: #ffffff;
+      color: #000000;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px;
+      position: relative;
+    }
+
+    .izquierda img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      position: absolute;
+      top: 50px;
+      left: 0;
+    }
+
+    .frase {
+      text-align: center;
+      font-size: 33px;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      line-height: 2;
+      padding: 10px;
+      margin-top: 280px;
+    }
+
+    .media-luna {
+      width: 65%;
+      height: 100%;
+      background-color: rgb(0, 89, 255);
+      border-top-left-radius: 55% 100%;
+      border-bottom-left-radius: 55% 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .formulario {
+      background-color: transparent;
+      color: white;
+      text-align: center;
+      width: 350px;
+    }
+
+    h2 {
+      margin-bottom: 25px;
+      font-size: 32px;
+      color: white;
+    }
+
+    form.p-4 {
+      background-color: white !important;
+      color: black !important;
+      border: 2px solid #000000;
+      padding: 20px !important;
+      border-radius: 10px !important;
+      position: relative;
+    }
+
+    input.form-control {
+      font-size: 18px;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1.5px solid #ccc;
+      transition: border-color 0.3s ease;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    input.form-control:focus {
+      border-color: rgb(0, 89, 255);
+      outline: none;
+      box-shadow: 0 0 5px rgb(0, 89, 255);
+    }
+
+    .btn-iniciar {
+      background-color: rgb(0, 89, 255);
+      border-color: rgb(0, 89, 255);
+      color: white;
+      font-size: 18px;
+      padding: 12px;
+      border-radius: 10px;
+      width: 100%;
+      cursor: pointer;
+      margin-bottom: 15px;
+      transition: background-color 0.3s ease;
+      border: none;
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .btn-iniciar:hover {
+      background-color: rgb(0, 70, 200);
+    }
+
+    .btn-volver {
+      background-color: #6c757d;
+      border-color: #6c757d;
+      color: white;
+      font-size: 18px;
+      padding: 12px;
+      border-radius: 10px;
+      width: 100%;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      border: none;
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .btn-volver:hover {
+      background-color: #5a6268;
+    }
+
+    .toggle-btn {
+      position: absolute;
+      top: 125px;
+      right: 15px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .toggle-btn i {
+      font-size: 18px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contenedor">
+    <div class="izquierda">
+      <a href="index.html">
+        <img src="LOGO.jpeg" alt="Logo JEMAY Systems" />
+      </a>
+      <div class="frase">
+        "NOTAS AL ALCANCE<br>DE UN CLICK,<br>EDUCACIÓN SIN LÍMITES"
+      </div>
+    </div>
+
+    <div class="media-luna">
+      <div class="formulario">
+        <h2>INICIO DE SESIÓN ADMINISTRADOR</h2>
+        <form class="p-4" action="conexionadmin.php" method="post">
+          <input type="text" class="form-control" name="identificacion" placeholder="Identificación" required />
+          
+          <div class="position-relative">
+            <input type="password" class="form-control" name="contraseña" id="contraseña" placeholder="Contraseña" required />
+            <button type="button" class="toggle-btn" onclick="togglePassword()" tabindex="-1">
+              <i id="toggleIcon" class="bi bi-eye-slash"></i>
+            </button>
+          </div>
+
+          <button type="submit" class="btn-iniciar">Iniciar Sesión</button>
+          <button type="button" class="btn-volver" onclick="window.location.href='InicioSesion.html'">Volver</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>

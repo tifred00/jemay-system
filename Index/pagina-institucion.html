@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Institución Educativa XYZ</title>
+  <link rel="icon" href="graduacion.png" type="image/png">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    
+    .header {
+      background-color: #ffffff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .header img {
+      width: 250px;
+    }
+
+    .header a {
+      margin-left: 15px;
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+    }
+
+    .header a:hover {
+      text-decoration: underline;
+    }
+
+    hr {
+      margin: 0;
+      border: none;
+      border-top: 1px solid #ddd;
+    }
+
+    
+    .main-menu {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px 0;
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .main-menu button,
+    .main-menu select {
+      font-size: 18px;
+      padding: 10px 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background-color: #f8f8f8;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .main-menu button:hover,
+    .main-menu select:hover {
+      background-color: #e9ecef;
+    }
+
+    .main-menu input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    
+    .content {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 30px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      gap: 30px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .content .left {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .content .left img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+
+    .content .right {
+      flex: 1.2;
+      min-width: 300px;
+      font-size: 18px;
+      text-align: justify;
+    }
+
+    .content h1 {
+      text-align: center;
+      font-size: 32px;
+      color: #333;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .content .right img {
+      display: block;
+      margin: 20px auto;
+      width: 400px;
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 900px) {
+      .content {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .content .right {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+ 
+  <div class="header">
+    <a href="index.html">
+      <img src="LOGO.jpeg" alt="Logo">
+    </a>
+    <div>
+      <a href="mision.html">Misión</a>
+      <a href="vision.html">Visión</a>
+      <a href="nosotros.html">Acerca de Nosotros</a>
+      <a href="InicioSesion.html">Inicio de Sesión</a>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="main-menu">
+    <a href="pagina-manual.html">
+      <button>Manual de Convivencia</button>
+    </a>
+    <a href="pagina-institucion.html">
+      <button>Institución</button>
+    </a>
+    <select onchange="location.href=this.value;">
+      <option disabled selected>Departamentos</option>
+      <option value="Ciencias.html">Ciencias</option>
+      <option value="Lenguas.html">Lenguas</option>
+      <option value="Matematicas.html">Matemáticas</option>
+    </select>
+    <select onchange="location.href=this.value;">
+      <option disabled selected>Noticias</option>
+      <option value="Inscripciones.html">Inscripciones</option>
+      <option value="Graduacion.html">Graduación</option>
+    </select>
+    <form onsubmit="buscar(); return false;">
+      <input type="text" placeholder="Buscar" id="busqueda">
+    </form>
+  </div>
+
+  
+  <div class="content">
+    <h1>Bienvenidos a la Institución Educativa XYZ</h1>
+
+    <div class="left">
+      <img src="colegio.png" alt="Instalaciones del Colegio">
+      <img src="colegio2.png" alt="Instalaciones 2">
+    </div>
+
+    <div class="right">
+      <p><strong>La Institución Educativa XYZ</strong> es un espacio de aprendizaje dedicado a formar individuos íntegros, capaces de enfrentar los desafíos del futuro. Nuestro enfoque educativo está basado en valores de respeto, trabajo en equipo y responsabilidad.</p>
+
+      <p>Contamos con un cuerpo docente altamente calificado y comprometido con la formación integral de los estudiantes, ofreciendo una educación de calidad que combina lo académico con el desarrollo personal y social.</p>
+
+      <p>Nos destacamos por nuestras instalaciones modernas, que incluyen laboratorios, áreas deportivas y espacios culturales que fomentan un ambiente de aprendizaje dinámico y enriquecedor.</p>
+
+      <p>En nuestra institución, los estudiantes no solo se preparan para los exámenes, sino para la vida, a través de programas extracurriculares que incluyen deportes, arte, ciencia y tecnología.</p>
+
+      <img src="docentes.png" alt="Equipo Docente">
+    </div>
+  </div>
+
+</body>
+</html>

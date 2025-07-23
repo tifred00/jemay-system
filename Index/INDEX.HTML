@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>JEMAY Systems</title>
+  <link rel="icon" href="graduacion.png" type="image/png">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+ 
+    .header {
+      background-color: #ffffff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .header img {
+      width: 250px;
+    }
+
+    .header a {
+      margin-left: 15px;
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+    }
+
+    .header a:hover {
+      text-decoration: underline;
+    }
+
+    hr {
+      margin: 0;
+      border: none;
+      border-top: 1px solid #ddd;
+    }
+
+    /* Menú principal */
+    .main-menu {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px 0;
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .main-menu button,
+    .main-menu select {
+      font-size: 18px;
+      padding: 10px 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background-color: #f8f8f8;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .main-menu button:hover,
+    .main-menu select:hover {
+      background-color: #e9ecef;
+    }
+
+    .main-menu input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    /* Contenido principal */
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      padding: 40px;
+      background-color: #fff;
+      margin: 30px auto;
+      width: 90%;
+      max-width: 1200px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      flex-wrap: nowrap;
+    }
+
+    .content .image {
+      flex: 1;
+      text-align: center;
+    }
+
+    .content .image img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+    }
+
+    .content .text {
+      flex: 1;
+    }
+
+    .content .text p {
+      font-size: 18px;
+      line-height: 1.6;
+      text-align: justify;
+      padding: 10px;
+    }
+
+    .content .text b {
+      font-size: 24px;
+      display: block;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+  <div class="header">
+    <a href="index.html">
+      <img src="LOGO.jpeg" alt="Logo">
+    </a>
+    <div>
+      <a href="mision.html">Misión</a>
+      <a href="vision.html">Visión</a>
+      <a href="nosotros.html">Acerca de Nosotros</a>
+      <a href="InicioSesion.html">Inicio de Sesión</a>
+    </div>
+  </div>
+
+  <hr>
+
+
+  <div class="main-menu">
+    <a href="pagina-manual.html">
+      <button>Manual de Convivencia</button>
+    </a>
+    <a href="pagina-institucion.html">
+      <button>Institución</button>
+    </a>
+    <select onchange="location.href=this.value;">
+      <option disabled selected>Departamentos</option>
+      <option value="Ciencias.html">Ciencias</option>
+      <option value="Lenguas.html">Lenguas</option>
+      <option value="Matematicas.html">Matemáticas</option>
+    </select>
+    <select onchange="location.href=this.value;">
+      <option disabled selected>Noticias</option>
+      <option value="Inscripciones.html">Inscripciones</option>
+      <option value="Graduacion.html">Graduación</option>
+    </select>
+    <form onsubmit="buscar(); return false;">
+      <input type="text" placeholder="Buscar" id="busqueda">
+    </form>
+  </div>
+
+
+  <div class="content">
+    <div class="image">
+      <img src="eslogan.jpeg" alt="Eslogan">
+    </div>
+    <div class="text">
+      <p>
+        <b>JEMAY Systems</b>
+        JEMAY Systems es un sistema de digitación y visualización de notas diseñado para optimizar la gestión académica. Su plataforma permite a docentes registrar calificaciones de manera eficiente y a estudiantes consultar sus resultados de forma rápida y segura. Con una interfaz intuitiva y funcionalidades avanzadas, JEMAY Systems busca mejorar la transparencia en los procesos de evaluación y facilitar el acceso a la información académica en tiempo real.
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>

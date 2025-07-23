@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Departamento de Ciencias - JEMAY Systems</title>
+  <link rel="icon" href="graduacion.png" type="image/png">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .header {
+      background-color: #ffffff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .header img {
+      width: 250px;
+    }
+
+    .header a {
+      margin-left: 15px;
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+    }
+
+    .header a:hover {
+      text-decoration: underline;
+    }
+
+    hr {
+      margin: 0;
+      border: none;
+      border-top: 1px solid #ddd;
+    }
+
+    .main-menu {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px 0;
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .main-menu button,
+    .main-menu select {
+      font-size: 18px;
+      padding: 10px 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background-color: #f8f8f8;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .main-menu button:hover,
+    .main-menu select:hover {
+      background-color: #e9ecef;
+    }
+
+    .main-menu input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .content {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 30px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      gap: 30px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .content .left {
+      flex: 1;
+      min-width: 300px;
+      text-align: center;
+    }
+
+    .content .left img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .content .right {
+      flex: 1.2;
+      min-width: 300px;
+      font-size: 18px;
+      text-align: justify;
+    }
+
+    .content h1 {
+      text-align: center;
+      font-size: 32px;
+      color: #333;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 900px) {
+      .content {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .content .right {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+  <div class="header">
+    <a href="index.html">
+      <img src="LOGO.jpeg" alt="Logo">
+    </a>
+    <div>
+      <a href="mision.html">Misión</a>
+      <a href="vision.html">Visión</a>
+      <a href="nosotros.html">Acerca de Nosotros</a>
+      <a href="InicioSesion.html">Inicio de Sesión</a>
+    </div>
+  </div>
+
+  <hr>
+
+
+  <div class="main-menu">
+    <a href="pagina-manual.html">
+      <button>Manual de Convivencia</button>
+    </a>
+    <a href="pagina-institucion.html">
+      <button>Institución</button>
+    </a>
+    <select onchange="location.href=this.value;">
+      <option disabled selected>Departamentos</option>
+      <option value="Ciencias.html">Ciencias</option>
+      <option value="Lenguas.html">Lenguas</option>
+      <option value="Matematicas.html">Matemáticas</option>
+    </select>
+    <select onchange="location.href=this.value;">
+      <option disabled selected>Noticias</option>
+      <option value="Inscripciones.html">Inscripciones</option>
+      <option value="Graduacion.html">Graduación</option>
+    </select>
+    <form onsubmit="buscar(); return false;">
+      <input type="text" placeholder="Buscar" id="busqueda">
+    </form>
+  </div>
+
+  <div class="content">
+    <h1>Departamento de Ciencias</h1>
+
+    <div class="left">
+      <img src="ciencias.png" alt="Departamento de Ciencias">
+    </div>
+
+    <div class="right">
+      <p>El Departamento de Ciencias tiene como objetivo proporcionar una educación científica sólida, estimulando el interés por la investigación y el conocimiento de los fenómenos naturales. A través de nuestras clases y actividades, los estudiantes desarrollan habilidades críticas y analíticas que les permiten entender y resolver problemas científicos.</p>
+
+      <p>Contamos con modernos laboratorios y recursos educativos que facilitan el aprendizaje práctico y experimental de las ciencias físicas, biológicas y químicas.</p>
+    </div>
+  </div>
+
+</body>
+</html>

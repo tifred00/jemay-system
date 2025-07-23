@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visión Estudiante</title>
+  <style>
+    :root {
+      --azul: #0059FF;
+      --blanco: #ffffff;
+      --gris-claro: #f5f5f5;
+      --texto: #333333;
+      --sombra: rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #dfe9f3, #ffffff);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .top-bar {
+      width: 100%;
+      max-width: 1000px;
+      background-color: var(--azul);
+      color: white;
+      border-radius: 20px 20px 0 0;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      margin-bottom: 0;
+    }
+
+    .profile-icon {
+      width: 70px;
+      height: 70px;
+      background-color: white;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      color: var(--azul);
+      margin-right: 20px;
+    }
+
+    .info-box {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .info-box div {
+      min-width: 200px;
+      font-weight: 600;
+    }
+
+    .main-box {
+      width: 100%;
+      max-width: 1000px;
+      background-color: var(--blanco);
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 10px 30px var(--sombra);
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .button-card {
+      background-color: var(--gris-claro);
+      border-radius: 15px;
+      padding: 25px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .button-card button,
+    .button-card a {
+      padding: 14px;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      text-align: center;
+      background-color: var(--azul);
+      color: var(--blanco);
+      cursor: pointer;
+      transition: background 0.3s ease;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .button-card button:hover,
+    .button-card a:hover {
+      background-color: #0047d1;
+    }
+
+
+    .logo-frase {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      background-color: var(--blanco);
+      padding: 20px 30px 30px;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 10px 30px var(--sombra);
+      width: 100%;
+      max-width: 1000px;
+      margin-top: -20px;
+    }
+
+    .logo, .frase {
+      flex: 1 1 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo img,
+    .frase img {
+      max-height: 120px;
+      height: auto;
+      width: auto;
+      object-fit: contain;
+    }
+
+    @media (max-width: 768px) {
+      .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 15px;
+      }
+
+      .info-box {
+        flex-direction: column;
+      }
+
+      .main-box {
+        padding: 20px;
+      }
+
+      .button-card {
+        grid-template-columns: 1fr;
+      }
+
+      .logo-frase {
+        flex-direction: column;
+        gap: 20px;
+        border-radius: 0 0 20px 20px;
+      }
+
+      .logo img,
+      .frase img {
+        max-height: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+  <div class="top-bar">
+    <div class="profile-icon">👤</div>
+    <div class="info-box">
+      <div><strong>Nombre:</strong> ____________________</div>
+      <div><strong>Identificación:</strong> _____________</div>
+      <div><strong>Grado:</strong> ____________</div>
+    </div>
+  </div>
+
+
+  <div class="main-box">
+    <div class="button-card">
+      <button>Seguimiento</button>
+      <button>Asistencias</button>
+      <button>Proceso Disciplinario</button>
+      <a href="InicioSesion.html">Cerrar Sesión</a>
+    </div>
+  </div>
+
+
+  <div class="logo-frase">
+    <div class="logo"><img src="LOGO.jpeg" alt="Logo"></div>
+    <div class="frase"><img src="eslogan.PNG" alt="Frase o Eslogan"></div>
+  </div>
+
+</body>
+</html>

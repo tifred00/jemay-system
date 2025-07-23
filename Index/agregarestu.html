@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agregar Estudiantes</title>
+  <style>
+    :root {
+      --azul: #0059FF;
+      --blanco: #ffffff;
+      --gris-claro: #f5f5f5;
+      --texto: #333333;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #dfe9f3, #ffffff);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 0; /* Espacio vertical moderado-amplio */
+    }
+
+    .container {
+      display: flex;
+      width: 1100px;
+      height: 530px;
+      background: var(--blanco);
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+    }
+
+    .form-panel {
+      flex: 1;
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .form-panel h1 {
+      font-size: 2rem;
+      color: var(--azul);
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem 2rem;
+    }
+
+    .form-left,
+    .form-right {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    label {
+      font-weight: 600;
+      color: var(--texto);
+      margin-bottom: 0.3rem;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="file"],
+    input[type="number"] {
+      padding: 10px 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      width: 100%;
+    }
+
+    input::placeholder {
+      color: #888;
+      font-style: italic;
+    }
+
+    .form-buttons {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input[type="submit"],
+    .btn-volver {
+      padding: 12px;
+      width: 100%;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    input[type="submit"] {
+      background-color: var(--azul);
+      color: var(--blanco);
+      border: none;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0047d1;
+    }
+
+    .btn-volver {
+      background-color: #e0e0e0;
+      color: var(--azul);
+      text-align: center;
+      text-decoration: none;
+      border: none;
+    }
+
+    .btn-volver:hover {
+      background-color: var(--azul);
+      color: white;
+    }
+
+    .info-panel {
+      flex: 1;
+      background: linear-gradient(to top right, #0047d1, #0059ff);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .info-panel h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .info-panel p {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .info-panel .signup-btn {
+      padding: 10px 30px;
+      border: 2px solid white;
+      border-radius: 30px;
+      background: transparent;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .info-panel .signup-btn:hover {
+      background-color: white;
+      color: #0059FF;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        height: auto;
+        width: 90%;
+      }
+
+      .info-panel {
+        border-radius: 0 0 20px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-panel">
+      <h1><strong>Agregar Estudiantes</strong></h1>
+      <form method="post" action="crearestudiantes.php" enctype="multipart/form-data">
+        <div class="form-grid">
+          <div class="form-left">
+            <label for="identificacion">Identificación:</label>
+            <input type="text" name="identificacion" id="identificacion" placeholder="Ingrese la identificación" />
+
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" name="contraseña" id="contraseña" placeholder="Ingrese la contraseña" />
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Ingrese el nombre" />
+          </div>
+
+          <div class="form-right">
+            <label for="grado">Grado:</label>
+            <input type="number" name="grado" id="grado" placeholder="Ingrese el grado" />
+
+            <label for="foto">Foto:</label>
+            <input type="file" name="foto" id="foto" />
+          </div>
+        </div>
+
+        <div class="form-buttons">
+          <input type="submit" value="Agregar" />
+          <a href="visionadmin.html" class="btn-volver">Volver</a>
+        </div>
+      </form>
+    </div>
+
+    <div class="info-panel">
+      <h2>Registro de Estudiantes</h2>
+      <p>Completa los campos para agregar un nuevo estudiante al sistema.</p>
+      <button class="signup-btn">¿Necesitas ayuda?</button>
+    </div>
+  </div>
+</body>
+</html>
